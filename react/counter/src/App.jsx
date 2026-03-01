@@ -1,37 +1,31 @@
 import { useState } from 'react'
 import './App.css'
 
-  function App() {
-    let[name,setName]=useState("");
-      const [submitName, setSubmitName] = useState("");
-      const [error,setError] = useState("");
+function App(){
+     let [add,setAdd]=useState(6);
+  
+  
 
-let handleChange=(dets)=> {
-  setName(dets.target.value)
+    function Add(){
+      setAdd(add+1)
+    }
+    
+function remove(){
+  if(add>0){
+  setAdd(add-1)
 }
-
-let handleSubmit =()=>{
- if(name === ""){
-  setError("Please Enter The Text");
-  setSubmitName("");
- }else{
-  setError("");
-  setSubmitName(name);
- }
 }
-  return ( 
+  
+  return (
     <>
-      <input 
-        type="text" 
-        placeholder="Enter your name"
-        onChange={handleChange}
-      /> <br /> <br />
-        <button onClick={handleSubmit}> Submit</button>
-        <h3 style={{color:"red"}}>{error}</h3>
-      <h1>Hello {submitName}</h1>
+    <h1> Counter in React </h1>
+    <button onClick={Add}> Add Count : {add}</button> <br /> <br />
+    <button onClick={remove}> Remove count :{add}</button>
     </>
-  );
+  )
 }
+
+
 
 export default App
 
