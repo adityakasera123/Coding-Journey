@@ -20,7 +20,11 @@ function remove(){
     <>
     <h1> Counter in React </h1>
     <button onClick={Add}> Add Count : {add}</button> <br /> <br />
-    <button onClick={remove}> Remove count :{add}</button>
+   
+<button onClick={remove} disabled={add===0}>
+    Decrease
+
+</button>
     </>
   )
 }
