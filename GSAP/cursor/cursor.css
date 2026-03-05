@@ -13,6 +13,9 @@ html, body {
   height: 100%;
   width: 100%;
   background-color:cornsilk;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #cursor{
@@ -21,4 +24,12 @@ html, body {
     background-color: #91b82d;
     border-radius: 50px;
     position: fixed;
+}
+#image{
+height: 30vw;
+width: 60vw;
+background-color: red;
+background-image: url(https://images.unsplash.com/photo-1772536888848-c0e7f0f6cf39?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+background-position: center;
+background-size: cover;
 }
