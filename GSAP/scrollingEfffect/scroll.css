@@ -22,6 +22,7 @@ html, body {
   background-color: #d8ff04;
   padding: 3vw 0;
 overflow: hidden;
+white-space: nowrap;
 }
 .marque{
   flex-shrink: 0;
@@ -29,8 +30,7 @@ overflow: hidden;
   align-items: center;
   gap:3vw;
   padding: 0 1.5vw;
-white-space: nowrap;
-transform: translateX(-100%);
+
 }
 #move img{
   height: 4vw;
