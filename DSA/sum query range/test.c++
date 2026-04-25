@@ -12,13 +12,11 @@ class Solution {
 
         vector<int> ans;
 
-        for(auto q : queries){
-            int l = q[0];
-            int r = q[1];
-
-            int sum = prefix[r+1] - prefix[l];
-            ans.push_back(sum);
-        }
+    for (int i=0; i<queries.size(); i++){
+        int l=queries[i][0];
+        int r=queries[i][1];
+        ans.push_baclk(prefix[r+1]-prefix[l]);
+    }
 
         return ans;
     }
