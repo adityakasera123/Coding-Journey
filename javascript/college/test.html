@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+
+<ul id="list"></ul>
+<button onclick="getWindow()">Open Window</button>
+
+<script>
+    // Removed the space after the comma and increased height to meet browser minimums
+    let param = "height=200,width=500"; 
+    
+    function getWindow(){
+        window.open("/", "test", param);
+    }
+</script> 
+</body>
+</html>
