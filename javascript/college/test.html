@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Objects</title>
 </head>
-<body> 
+<body>
+    <script> 
+        // Attaching the polyfill to Array.prototype
+        Array.prototype.mymap = function(callback) {
+            let newArray = [];
+            for (let i = 0; i < this.length; i++) {
+                newArray.push(callback(this[i], i, this));
+            }
+            return newArray;
+        }
 
-<ul id="list"></ul>
-<button onclick="getWindow()">Open Window</button>
-
-<script>
-    // Removed the space after the comma and increased height to meet browser minimums
-    let param = "height=200,width=500"; 
-    
-    function getWindow(){
-        window.open("/", "test", param);
-    }
-</script> 
+        let arr = [1, 2, 3, 4, 5];
+        let newArr = arr.mymap(function(item) {
+            return item * 2;
+        });
+        
+        console.log(newArr); // Output: [2, 4, 6, 8, 10]
+    </script>
 </body>
 </html>
